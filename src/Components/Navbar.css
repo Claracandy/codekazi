@@ -1,0 +1,35 @@
+.navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  
+  .logo img {
+    height: 70px;
+    width: 100px;
+    padding: 0px;
+    
+ }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 24px; 
+    
+  }
+  
+  .menu a {
+    color: #141313; 
+    text-decoration: none;
+    font-size: 18px; 
+  }
+  
+  .menu a:hover {
+    color: #fbbf24; 
+  }

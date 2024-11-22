@@ -1,0 +1,42 @@
+.About {
+    padding: 40px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.About-content {
+    display: flex;
+    align-items: center;
+}
+
+.About-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.About-text {
+    flex: 3;
+    text-align: left;
+}
+
+.About-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.About-text p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+  
