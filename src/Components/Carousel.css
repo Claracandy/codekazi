@@ -1,44 +1,43 @@
 .carousel-container {
     position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
   }
   
-  .carousel {
+  .carousel-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
   }
   
-  .carousel img {
+  .carousel-slide img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    object-fit: cover;
   }
   
-  button {
+  .carousel-controls {
     position: absolute;
     top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     transform: translateY(-50%);
+  }
+  
+  .carousel-controls button {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 20px;
-    border-radius: 50%;
-    z-index: 10;
+    transition: background-color 0.3s;
   }
   
-  button:hover {
+  .carousel-controls button:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
   }
   

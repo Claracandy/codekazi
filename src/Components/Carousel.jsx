@@ -1,31 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Carousel.css'; 
 
-const carouselItems = [
-  { id: 1, src: '/image/image 2.jpg' },
-  { id: 2, src: '' },
-  { id: 3, src: '' },
-  { id: 4, src: '' },
-];
-
 const Carousel = () => {
+  
+  const images = [
+   ' /image/image 1.jpg',
+   '/image/image 2.jpg',
+   '/image/image 3.jpg',
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
-  };
+  
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); 
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + carouselItems.length) % carouselItems.length);
-  };
+    
+    return () => clearInterval(intervalId);
+  }, [images.length]);
 
   return (
     <div className="carousel-container">
-      <button className="prev" onClick={prevSlide}>❮</button>
-      <div className="carousel">
-        <img src={carouselItems[currentIndex].src} alt={`carousel-item-${currentIndex}`} />
+      <div className="carousel-slide">
+        <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
       </div>
-      <button className="next" onClick={nextSlide}>❯</button>
+      <div className="carousel-controls">
+        <button onClick={() => setCurrentIndex((currentIndex - 1 + images.length) % images.length)}>
+          Prev
+        </button>
+        <button onClick={() => setCurrentIndex((currentIndex + 1) % images.length)}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };
