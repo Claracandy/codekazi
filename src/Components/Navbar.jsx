@@ -1,27 +1,29 @@
+import React from 'react';
 import './Navbar.css';
+
 const Navbar = () => {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <a href="About">About</a>
+        <nav className='navbar'>
+            <ul className='navbar-list'>
+                <li className='navbar-item'>
+                    <a href='/' className='navbar-link'>About</a>
                 </li>
-                <li>
-                    <a href="Home">Home</a>
+                <li className='navbar-item'>
+                    <a href='/' className='navbar-link'>Blog</a>
                 </li>
-                <li>
-                    <a href="Blog">Blog</a>
+                <li className='navbar-item'>
+                    <a href='/' className='navbar-link'>Portfolio</a>
                 </li>
-                <li>
-                    <a href="Portfolio">Portfolio</a>
+                <li className='navbar-item'>
+                    <a href='/' className='navbar-link'>Contact</a>
                 </li>
-                <li>
-                    <a href='Contact'>Contact</a>
+                <li className='navbar-item'>
+                    <a href='/' className='navbar-link'>More About Us</a>
                 </li>
                
             </ul>
         </nav>
-    )
-
+    );
 }
+
 export default Navbar;
